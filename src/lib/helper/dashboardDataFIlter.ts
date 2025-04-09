@@ -4,7 +4,9 @@ export const lineChartFilter = (savingsTrends: ISavingsTrends[]) => {
 	const labels = savingsTrends.map((item) => item.month);
 	const data = savingsTrends.map((item) => item.savings);
 
-	return { labels, data };
+	const colors = '#8979FF';
+
+	return { labels, data, colors };
 };
 
 export const pieChartFilter = (savingsByCategory: ISavingsByCategory[]) => {
@@ -14,7 +16,9 @@ export const pieChartFilter = (savingsByCategory: ISavingsByCategory[]) => {
 		total ? parseFloat(((item.savings / total) * 100).toFixed(2)) : 0
 	);
 
-	return { labels, data };
+	const colors = ['#63CFE5', '#A194FF', '#FFA8A1', '#A277AA'];
+
+	return { labels, data, colors };
 };
 
 export const groupBarFilter = (detailedSavings: IDetailedSavings[]) => {
@@ -36,5 +40,7 @@ export const groupBarFilter = (detailedSavings: IDetailedSavings[]) => {
 		}
 	});
 
-	return { data, services, labels };
+	const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'];
+
+	return { data, services, labels, colors };
 };
