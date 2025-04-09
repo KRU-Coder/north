@@ -9,5 +9,8 @@ export default defineConfig({
 		// 	'/api': 'https://north-case-api.vercel.app'
 		// }
 	},
+	define: {
+		__SVELTE_DEV__: true
+	},
 	plugins: [tailwindcss(), sveltekit()]
 });
