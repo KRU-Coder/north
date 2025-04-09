@@ -1,0 +1,19 @@
+<script lang="ts">
+	import type { SvelteComponent } from 'svelte';
+	import { twMerge } from 'tailwind-merge';
+
+	export let text: string | number | undefined;
+	export let className: string | undefined = undefined;
+	export let icon: typeof SvelteComponent | any = undefined;
+</script>
+
+<div
+	class={twMerge(
+		`bg-white-500 inline-flex rounded-md bg-red-900 px-3 py-1 text-[13px] text-white ${className}  items-center gap-2 `
+	)}
+>
+	{#if icon}
+		<svelte:component this={icon} />
+	{/if}
+	{text}
+</div>
