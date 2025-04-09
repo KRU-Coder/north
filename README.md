@@ -1,38 +1,67 @@
-# sv
+# North - Cloud Financial Automation Platform
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## App Info
 
-## Creating a project
+- **App Name**: North
+- **Website**: [https://www.north.cloud](https://www.north.cloud)
+- **Framework**: [SvelteKit](https://kit.svelte.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Package Manager**: [npm](https://www.npmjs.com/) / [yarn](https://yarnpkg.com/)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v16 or later)
+- [npm](https://www.npmjs.com/) (v7 or later)
+  or
+- [yarn](https://yarnpkg.com/)
+
+### Installation
+
+Clone this repository to your local machine:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+git clone <repository-url>
 ```
 
-## Developing
+install dependancy:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```bash
+yarn install
+```
+
+or
+
+```bash
+npm install
+```
+
+Cretae .env
+
+```bash
+touch .env
+```
+
+### Project Start
+
+npm
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
+yarn
 
 ```bash
-npm run build
+yarn  dev
 ```
 
-You can preview the production build with `npm run preview`.
+### Visit project
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```bash
+(http://localhost:3000/)
+```
