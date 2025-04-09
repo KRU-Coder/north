@@ -40,7 +40,7 @@
 			</div>
 			<div class="flex items-center gap-5">
 				<div>
-					<SmallParagraph text="Khem Upreti" />
+					<SmallParagraph text="John Doe" />
 					<Label text="example@gmail.com" />
 				</div>
 
