@@ -1,4 +1,4 @@
-# North - Cloud Financial Automation Platform
+# North
 
 ## App Info
 
@@ -63,5 +63,5 @@ yarn  dev
 ### Visit project
 
 ```bash
-(http://localhost:3000/)
+http://localhost:3000/
 ```
