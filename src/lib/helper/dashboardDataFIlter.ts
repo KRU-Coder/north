@@ -18,21 +18,16 @@ export const pieChartFilter = (savingsByCategory: ISavingsByCategory[]) => {
 };
 
 export const groupBarFilter = (detailedSavings: IDetailedSavings[]) => {
-	// Extract the unique services
 	const services = Array.from(new Set(detailedSavings.map((item) => item.service)));
-	// Extract the unique dates
 	const labels = Array.from(new Set(detailedSavings.map((item) => item.date)));
-
-	// Initialize the data object with zeroed arrays for each service
 	const data = services.reduce(
 		(acc, service) => {
-			acc[service] = labels.map(() => 0); // Initialize an array of zeros for each label
+			acc[service] = labels.map(() => 0);
 			return acc;
 		},
 		{} as { [key: string]: number[] }
 	);
 
-	// Populate the data object with the correct amounts
 	detailedSavings.forEach((item) => {
 		const serviceIndex = services.indexOf(item.service);
 		const dateIndex = labels.indexOf(item.date);
