@@ -12,7 +12,6 @@
 	import apiResponse from '$lib/constants/apiResponse.json';
 	import DashboardService from '$lib/services/dashboard';
 	import { onMount } from 'svelte';
-	import toast from 'svelte-french-toast';
 	const dashboardService = new DashboardService();
 
 	// 🚨🚨 Facing CORS Error, Using static data **apiResponse ==> same as api response **   🚨🚨
@@ -57,7 +56,6 @@
 			console.log({ resp });
 		} catch (error: any) {
 			console.log(error);
-			toast.error(error?.message || 'Error fetching data');
 		}
 	});
 </script>

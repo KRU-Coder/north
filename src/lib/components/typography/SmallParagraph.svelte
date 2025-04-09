@@ -2,9 +2,9 @@
 	import { twMerge } from 'tailwind-merge';
 
 	export let text: string | number;
-	export let className: string | undefined = undefined;
+	export let className: string = '';
 </script>
 
-<p class={twMerge(`text[14px] text-bruma ${className}`)}>
+<p class={twMerge(`text-bruma text-sm ${className}`)}>
 	{text}
 </p>
