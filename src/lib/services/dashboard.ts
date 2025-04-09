@@ -1,8 +1,9 @@
+import { config } from '$lib/config/environment';
 import ApiService from './api';
 
 class DashboardService extends ApiService {
 	constructor() {
-		super(import.meta.env.VITE_API_URL);
+		super(config.apiUrl);
 	}
 
 	public async getAll() {

@@ -1,3 +1,5 @@
+import { config } from '$lib/config/environment';
+
 class ApiService {
 	private baseUrl: string;
 
@@ -10,8 +12,7 @@ class ApiService {
 
 		const defaultHeaders = {
 			'Content-Type': 'application/json',
-			Authorization: import.meta.env.VITE_API_KEY,
-			
+			Authorization: config.apiKey
 		};
 
 		const response = await fetch(url, {
