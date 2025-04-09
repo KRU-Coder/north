@@ -3,7 +3,6 @@
 	import Sidebar from '$lib/components/layout/Sidebar.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
 	import '../../app.css';
-	import { Toaster } from 'svelte-french-toast';
 
 	let { children } = $props();
 </script>
@@ -24,5 +23,4 @@
 			{@render children()}
 		</div>
 	</div>
-	<Toaster />
 </div>

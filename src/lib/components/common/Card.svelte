@@ -7,9 +7,9 @@
 	export let amount: number;
 	export let icon: typeof SvelteComponent | any;
 	export let pillIcon: typeof SvelteComponent | any = undefined;
-	export let pillText: number | string | undefined = undefined;
+	export let pillText: string = '';
 	export let pillClass: string = '';
-	export let pillSubTitle: string | number | undefined = undefined;
+	export let pillSubTitle: string = '';
 </script>
 
 <div class="rounded-[6px] border border-slate-300 p-[23px]">

@@ -9,7 +9,7 @@
 
 <div
 	class={twMerge(
-		`bg-white-500 inline-flex rounded-md bg-red-900 px-3 py-1 text-[13px] text-white ${className}  items-center gap-2 `
+		`bg-white-500 inline-flex rounded-md bg-red-900 px-3 py-1 text-base text-white ${className}  items-center gap-2 `
 	)}
 >
 	{#if icon}
