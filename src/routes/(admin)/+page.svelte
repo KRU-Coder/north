@@ -15,6 +15,8 @@
 	import toast from 'svelte-french-toast';
 	const dashboardService = new DashboardService();
 
+	// 🚨🚨 Facing CORS Error, Using static data **apiResponse ==> same as api response **   🚨🚨
+
 	const { data: lineData, labels: lineLabels } = lineChartFilter(apiResponse.savingsTrends);
 
 	const { data: pieData, labels: pieLabels } = pieChartFilter(apiResponse.savingsByCategory);
