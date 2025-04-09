@@ -55,12 +55,12 @@
 	<Subtitle text="Overview" />
 
 	<div class="grid grid-cols-1 gap-5 md:my-5 md:grid-cols-2">
-		<Card title="Total Saving" amount={1200.5} icon={PigyBankIcon} />
+		<Card title="Total Saving" amount={apiResponse.overview.totalSavings} icon={PigyBankIcon} />
 		<Card
 			title="Current Month Saving"
-			amount={200.75}
+			amount={apiResponse.overview.currentMonthSavings}
 			icon={CalendarIcon}
-			pillText={`15.5%`}
+			pillText={`${apiResponse.overview.percentageChange}%`}
 			pillIcon={UpArrow}
 			pillClass="bg-green-600"
 			pillSubTitle="vs Last Month"
