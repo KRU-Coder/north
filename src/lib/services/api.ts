@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 class ApiService {
 	private baseUrl: string;
 
@@ -29,7 +28,7 @@ class ApiService {
 
 		try {
 			return await response.json();
-		} catch (error: any) {
+		} catch (error: unknown) {
 			console.log(error);
 			throw new Error('Error parsing JSON response');
 		}
@@ -41,14 +40,14 @@ class ApiService {
 		});
 	}
 
-	public async post(endpoint: string, data: any) {
+	public async post(endpoint: string, data: unknown) {
 		return this.request(endpoint, {
 			method: 'POST',
 			body: JSON.stringify(data)
 		});
 	}
 
-	public async put(endpoint: string, data: any) {
+	public async put(endpoint: string, data: unknown) {
 		return this.request(endpoint, {
 			method: 'PUT',
 			body: JSON.stringify(data)
