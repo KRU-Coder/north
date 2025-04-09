@@ -28,7 +28,7 @@
 	<div class="hidden w-full md:block">
 		<Input name="Search" type="search" placeholder="Enter keyword to search" icon={SearchIcon} />
 	</div>
-	<div class="flex items-center  gap-5 md:gap-10">
+	<div class="flex items-center gap-5 md:gap-10">
 		<div class="flex items-center gap-10">
 			<QuestionMarkIcon />
 			<BellIcon />

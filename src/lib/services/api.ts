@@ -11,7 +11,8 @@ class ApiService {
 
 		const defaultHeaders = {
 			'Content-Type': 'application/json',
-			Authorization: import.meta.env.VITE_API_KEY
+			Authorization: import.meta.env.VITE_API_KEY,
+			
 		};
 
 		const response = await fetch(url, {
