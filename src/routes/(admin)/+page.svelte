@@ -32,6 +32,8 @@
 
 	onMount(async () => {
 		try {
+			// 🔴🟠🟡🟢🔵🟣
+			// 🚨🚨 Facing CORS Eror  🚨🚨
 			const resp = await dashboardService.getAll();
 
 			// if (resp) {

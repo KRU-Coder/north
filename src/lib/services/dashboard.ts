@@ -6,7 +6,7 @@ class DashboardService extends ApiService {
 	}
 
 	public async getAll() {
-		return this.get('/');
+		return this.get('');
 	}
 }
 

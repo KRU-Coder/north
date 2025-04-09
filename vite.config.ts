@@ -4,10 +4,10 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	server: {
-		allowedHosts: [
-			'ee09-202-166-206-8.ngrok-free.app'
-			// You can add other allowed hosts here if needed
-		]
+		port: 3000
+		// proxy: {
+		// 	'/api': 'https://north-case-api.vercel.app'
+		// }
 	},
 	plugins: [tailwindcss(), sveltekit()]
 });
