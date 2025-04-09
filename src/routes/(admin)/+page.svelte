@@ -17,14 +17,23 @@
 
 	// 🚨🚨 Facing CORS Error, Using static data **apiResponse ==> same as api response **   🚨🚨
 
-	const { data: lineData, labels: lineLabels } = lineChartFilter(apiResponse.savingsTrends);
+	const {
+		data: lineData,
+		labels: lineLabels,
+		colors: lineColor
+	} = lineChartFilter(apiResponse.savingsTrends);
 
-	const { data: pieData, labels: pieLabels } = pieChartFilter(apiResponse.savingsByCategory);
+	const {
+		data: pieData,
+		labels: pieLabels,
+		colors: pieColors
+	} = pieChartFilter(apiResponse.savingsByCategory);
 
 	const {
 		data: barData,
 		labels: barLabels,
-		services: barServices
+		services: barServices,
+		colors: barColors
 	} = groupBarFilter(apiResponse.detailedSavings);
 
 	let lineDataFromApi: string[] = [];
@@ -75,7 +84,7 @@
 		<LineChart
 			labels={lineLabels}
 			data={lineData}
-			borderColor="#8979FF"
+			borderColor={lineColor}
 			height="80"
 			options={lineOptions}
 		/>
@@ -86,12 +95,7 @@
 			<Subtitle text="Saving by Category" className="my-5" />
 			<div class="rounded-[6px] border border-slate-300">
 				<div class="mx-auto flex items-center justify-center p-5 md:h-[550px]">
-					<PieChart
-						labels={pieLabels}
-						data={pieData}
-						colors={['#63CFE5', '#A194FF', '#FFA8A1', '#A277AA']}
-						options={pieOptions}
-					/>
+					<PieChart labels={pieLabels} data={pieData} colors={pieColors} options={pieOptions} />
 				</div>
 			</div>
 		</div>
@@ -103,7 +107,7 @@
 					<GroupedBarChart
 						services={barServices}
 						labels={barLabels}
-						colors={['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']}
+						colors={barColors}
 						options={multiBartOptions}
 						data={barData}
 					/>
