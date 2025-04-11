@@ -69,10 +69,12 @@
 			title="Current Month Saving"
 			amount={apiResponse.overview.currentMonthSavings}
 			icon={CalendarIcon}
-			pillText={`${apiResponse.overview.percentageChange}%`}
-			pillIcon={UpArrow}
-			pillClass="bg-green-600"
-			pillSubTitle="vs Last Month"
+			pilldata={{
+				text: `${apiResponse.overview.percentageChange}%`,
+				subTitle: 'vs Last Month',
+				className: 'bg-green-600',
+				icon: UpArrow
+			}}
 		/>
 	</div>
 
