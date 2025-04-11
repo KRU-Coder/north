@@ -1,4 +1,4 @@
-# North
+![North Logo](./static/images/logo.svg){ width=200px }
 
 ## App Info
 
@@ -53,6 +53,8 @@ npm
 ```bash
 npm run dev
 ```
+
+or
 
 yarn
 

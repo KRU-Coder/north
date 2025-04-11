@@ -1,4 +1,3 @@
-// menu.ts
 import DashboardIcon from '$lib/components/icons/DashboardIcon.svelte';
 import BookIcon from '$lib/components/icons/BookIcon.svelte';
 import GroupIcon from '$lib/components/icons/GroupIcon.svelte';
