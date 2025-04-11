@@ -5,4 +5,4 @@
 	export let className: string = '';
 </script>
 
-<p class={twMerge(`text-dark-gray text-xs ${className}`)}>{text}</p>
+<p class={twMerge(`text-dark-gray text-xs`, className)}>{text}</p>

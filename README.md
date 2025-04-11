@@ -46,6 +46,10 @@ Cretae .env
 touch .env
 ```
 
+Copy variables from .env.example
+
+Update .env with values
+
 ### Project Start
 
 npm

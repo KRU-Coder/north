@@ -36,4 +36,4 @@
 	});
 </script>
 
-<canvas bind:this={canvas} {width} {height}></canvas>
+<canvas bind:this={canvas} {width} {height} data-testid="pie-chart"></canvas>

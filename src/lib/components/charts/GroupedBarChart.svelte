@@ -54,4 +54,4 @@
 	});
 </script>
 
-<canvas bind:this={canvas}></canvas>
+<canvas bind:this={canvas} data-testid="grouped-bar-chart"></canvas>

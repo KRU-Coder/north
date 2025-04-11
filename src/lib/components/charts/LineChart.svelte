@@ -61,4 +61,4 @@
 	});
 </script>
 
-<canvas bind:this={canvas} {height}></canvas>
+<canvas bind:this={canvas} {height} data-testid="line-chart"></canvas>
