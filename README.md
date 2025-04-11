@@ -1,4 +1,4 @@
-![North Logo](./static/images/logo.svg){ width=200px }
+# North
 
 ## App Info
 
