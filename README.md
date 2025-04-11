@@ -40,10 +40,10 @@ or
 npm install
 ```
 
-Cretae .env
+Create .env
 
 ```bash
-touch .env
+cp .env.example .env
 ```
 
 ### Project Start

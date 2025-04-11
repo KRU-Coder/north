@@ -15,7 +15,7 @@
 <div class="rounded-[6px] border border-slate-300 p-[23px]">
 	<div class="flex items-start justify-between">
 		<div>
-			<Overline text={title} />
+			<Overline text={title} className="mb-4" />
 			<Title text={amount} />
 
 			{#if pillText}

@@ -5,6 +5,6 @@
 	export let className: string = '';
 </script>
 
-<h4 class={twMerge(`text-bruma text-xl font-semibold ${className}`)}>
+<h4 class={twMerge(`text-bruma text-xl font-semibold`, className)}>
 	{text}
 </h4>

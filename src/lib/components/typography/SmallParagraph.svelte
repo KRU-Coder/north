@@ -5,6 +5,6 @@
 	export let className: string = '';
 </script>
 
-<p class={twMerge(`text-bruma text-sm ${className}`)}>
+<p class={twMerge(`text-bruma text-sm`, className)}>
 	{text}
 </p>

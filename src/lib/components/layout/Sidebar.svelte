@@ -8,7 +8,6 @@
 	import { mainMenu } from '$lib/constants/menu';
 	import LogoutIcon from '../icons/LogoutIcon.svelte';
 
-	let currentUrl: string;
 	$: pathName = $page.url.pathname;
 
 	const isActive = (link: string, index: number) => {

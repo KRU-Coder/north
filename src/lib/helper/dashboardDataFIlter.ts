@@ -1,8 +1,14 @@
 import type { IDetailedSavings, ISavingsByCategory, ISavingsTrends } from '$lib/types/apiResponse';
 
 export const lineChartFilter = (savingsTrends: ISavingsTrends[]) => {
-	const labels = savingsTrends.map((item) => item.month);
-	const data = savingsTrends.map((item) => item.savings);
+	const [labels, data] = savingsTrends.reduce(
+		([labels, data]: [string[], number[]], { month, savings }) => {
+			labels.push(month);
+			data.push(savings);
+			return [labels, data];
+		},
+		[[], []] as [string[], number[]]
+	);
 
 	const colors = '#8979FF';
 
