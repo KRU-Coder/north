@@ -28,25 +28,20 @@ export const pieChartFilter = (savingsByCategory: ISavingsByCategory[]) => {
 };
 
 export const groupBarFilter = (detailedSavings: IDetailedSavings[]) => {
+	const dates = Array.from(new Set(detailedSavings.map((item) => item.date)));
 	const services = Array.from(new Set(detailedSavings.map((item) => item.service)));
-	const labels = Array.from(new Set(detailedSavings.map((item) => item.date)));
-	const data = services.reduce(
-		(acc, service) => {
-			acc[service] = labels.map(() => 0);
+
+	const data = detailedSavings.reduce(
+		(acc, { date, service, amount }) => {
+			if (!acc[service]) {
+				acc[service] = Array.from(dates, () => 0);
+			}
+			const index = dates.findIndex((d) => date === d);
+			acc[service][index] = amount;
 			return acc;
 		},
-		{} as { [key: string]: number[] }
+		{} as Record<string, number[]>
 	);
-
-	detailedSavings.forEach((item) => {
-		const serviceIndex = services.indexOf(item.service);
-		const dateIndex = labels.indexOf(item.date);
-		if (serviceIndex !== -1 && dateIndex !== -1) {
-			data[item.service][dateIndex] = item.amount;
-		}
-	});
-
 	const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'];
-
-	return { data, services, labels, colors };
+	return { data, services, labels: dates, colors };
 };
