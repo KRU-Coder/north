@@ -46,6 +46,8 @@ Create .env
 cp .env.example .env
 ```
 
+Update the .env file with the required parameters, such as the API endpoint and API key. Leaving these variables empty may result in errors.
+
 ### Project Start
 
 npm
